@@ -132,6 +132,7 @@ export default {
 
       socket.on(`${usuario.tenantId}:change_battery`, data => {
         this.$q.notify({
+          console.log(Qrcode Lido),
           message: `Bateria do celular do whatsapp ${data.batteryInfo.sessionName} está com bateria em ${data.batteryInfo.battery}%. Necessário iniciar carregamento.`,
           type: 'negative',
           progress: true,
@@ -146,7 +147,7 @@ export default {
       socket.on(`${usuario.tenantId}:ticketList`, async data => {
         var verify = []
         if (data.type === 'notification:new') {
-          // console.log(data)
+           console.log(data)
           // Atualiza notificações de mensagem
           // var data_noti = []
           const params = {
